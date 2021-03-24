@@ -1,28 +1,21 @@
 public class HomeWorkApp {
 
     public static void main (String[] args){
-        String fruit = "Orange\nBanana\nApple";
-        int a = 9;
-        int b = 3;
-        int value = 144;
-        printThreeWords(fruit);
-        System.out.println();
-        checkSumSing(a, b);
-        System.out.println();
-        printColor(value);
-        System.out.println();
-        compareNumbers(a, b);
+        printThreeWords();
+        checkSumSing(5, 14);
+        printColor(144);
+        compareNumbers(30, 7);
     }
 
-    public static void printThreeWords(String fruit){
-        System.out.println(fruit);
+    public static void printThreeWords(){
+        System.out.println("_Orange\n_Banana\n_Apple");
     }
 
-    public static void checkSumSing(int a, int b){
+    public static String checkSumSing(int a, int b){
         if (a + b >= 0)
-            System.out.println("Сумма положительная");
+            return "Сумма положительная";
         else
-            System.out.println("Сумма отрицательная");
+            return "Сумма отрицательная";
     }
 
     public static void printColor(int value){
