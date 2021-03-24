@@ -11,11 +11,11 @@ public class HomeWorkApp {
         System.out.println("_Orange\n_Banana\n_Apple");
     }
 
-    public static String checkSumSing(int a, int b){
+    public static void checkSumSing(int a, int b){
         if (a + b >= 0)
-            return "Сумма положительная";
+            System.out.println ("Сумма положительная");
         else
-            return "Сумма отрицательная";
+            System.out.println ("Сумма отрицательная");
     }
 
     public static void printColor(int value){
