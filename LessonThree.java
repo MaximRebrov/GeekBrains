@@ -3,14 +3,14 @@ public class LessonThree {
     public static void main (String[] args) {
         int[] len = new int[7];
         int[] arr = new int[]{3, 8, 4, 1, 2, 5, 7, 2};
-        boolean result = false;
+        boolean result;
         replaceNumbersArray();
         fillArray();
         multiplyingByTwo();
         diagonalArray();
         returnArray(len, 4);
         minAndMaxNumber();
-        result = arrayBalance(arr, result);
+        result = arrayBalance(arr);
         System.out.println(result);
     }
 
@@ -89,10 +89,10 @@ public class LessonThree {
         }
         for(int j = 0; j < arr.length; j++){
             x += arr[j];
-            if(sum / 2 == x)
-                break;
+            if(x * 2 == sum)
+                return true;
         }
-        return true;
+        return false;
     }
 }
 
