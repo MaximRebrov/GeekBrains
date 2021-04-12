@@ -1,45 +1,29 @@
+package LessonSix;
+
 public class Main {
-    public static void main (String[] args){
 
-        sumNumbers(14,9);
-        System.out.println(checkNumbers(-13));
-        numChecking(13);
-        cycleString(3, "Hi");
-        year(2000);
-    }
+    public static void main(String[] args) {
 
-    public static boolean sumNumbers(int a, int b){
-        int sum = a + b;
-        if (sum >= 10 && sum <= 20)
-            return true;
-        else
-            return false;
-    }
+        int obstacleLength = 350;
 
-    public static String checkNumbers(int a){
-        if(a > 0)
-            return "Число положительное!";
-        else
-            return "Число отрицательное!";
-    }
+        Animal dog = new Dog("Тапок", 500, 10);
+        Cat cat = new Cat("Муся", 200, 0);
+        Animal dog1 = new Dog("Борис", 450, 50);
+        Dog dog2 = new Dog("Бобик", 150, 30);
+        Cat cat1 = new Cat("Зинка", 230, 0);
 
-    public static boolean numChecking(int a){
-        if(a < 0)
-            return true;
-        else
-            return false;
-    }
+        cat.swim(obstacleLength);
+        cat.running(obstacleLength);
+        dog.swim(obstacleLength);
+        dog.running(obstacleLength);
+        dog1.swim(obstacleLength);
+        dog1.running(obstacleLength);
+        cat1.swim(obstacleLength);
+        cat1.running(obstacleLength);
+        dog2.running(obstacleLength);
+        dog2.swim(obstacleLength);
 
-    public static void cycleString(int a, String string){
-        for(int i = 0; i < a; i++){
-            System.out.println(string);
-        }
-    }
-
-    public static boolean year (int year){
-        if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
-            return true;
-        else
-            return false;
+        dog.count();
+        cat.count();
     }
 }
